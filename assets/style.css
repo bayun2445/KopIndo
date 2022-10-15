@@ -1,23 +1,23 @@
+* {
+    margin: 0;
+}
+
+h1, h2 {
+    font-family: 'Oswald', sans-serif;
+}
+
 header {
     display: flex;
-    position: relative;
 
     background-color: #2D2424;
     width: 100%;
+    height: 80px;
     text-align: center;
 }
 
 body {
-    margin: 0 auto;
     font-family: 'Noto Sans', sans-serif;
-}
-
-h1 span{
-    font-family: 'Oswald', sans-serif;
-    color: #2D2424;
     background-color: #E0C097;
-    padding-left: 5px;
-    padding-right: 5px;
 }
 
 nav span {
@@ -31,22 +31,96 @@ nav {
     color: #E0C097;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    position: relative;
+}
+
+aside {
+    padding: 10px;
+    flex-grow: 1;
+    max-width: 375px;
+    background-color: #B85C38;
+}
+
+
 .box {
     flex-grow: 1;
     align-self: center;
 }
 
-.banner {
-    max-width: 100%;
-    max-height:50px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: 
-    no-repeat;
-    background-size: cover;
+.logo {
+    font-family: 'Oswald', sans-serif;
+    color: #2D2424;
+    background-color: #E0C097;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
-#img-banner {
-    max-height: 100%;
+#banner {
+    flex-grow: 1;
+    background-image: url("coffee-banner.webp");
+    min-height:100px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#banner blockquote {
+    background-color:rgba(255,255,255,.55);
+    color:#2D2424;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 3;
+}
+
+#primary {
+    flex-grow: 7;
+}
+
+#profile-card {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow:0 5px 5px 0 rgb(14, 14, 14);
+}
+
+#profile-card > img {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50% 50% 50% 50%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+#profile-social {
+    display: flex;
+    justify-content: space-between;
+}
+
+#profile-social img {
+    flex-grow: 1;
+    width: 45px;
+    height: 45px;
+    margin: 15px;
+    object-fit: contain;
 }
